@@ -21,11 +21,11 @@
 var foods = ['pineapple', 'mango', 'ribeye', 'curry', 'tacos', 'ribeye', 'mango'];
 
 function firstItem(arr, cb){
-	return arr[0];
+	cb(arr[0]);
 }
 
 firstItem(foods, (firstItem) => {
-  	console.log('The first item is ' + firstItem);
+  	console.log(`The first item is ` + firstItem + '.');
 });
 
 // Write a function called getLength that passes the length of the array into the callback
@@ -34,7 +34,7 @@ function getLength (arr, cb){
 }
 
 getLength(foods, (length) => {
-  console.log('The length of the array is ' + length);
+  console.log(`The length of the array is ` + length);
 });
 
 // Write a function called last which passes the last item of the array into the callback
@@ -64,7 +64,7 @@ function multiplyNums (x, y, cb){
 }
 
 multiplyNums(5, 10, (product) => {
-  console.log('The product is ' + product);
+  console.log(`The product is ` + product);
 });
 
 // Write a function called contains that checks if an item is present inside of the given array.
