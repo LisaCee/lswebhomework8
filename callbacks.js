@@ -25,58 +25,70 @@ function firstItem(arr, cb){
 }
 
 firstItem(foods, (firstItem) => {
+<<<<<<< HEAD
+  	console.log('The first item is ' + firstItem + '.');
+=======
   	console.log(`The first item is ` + firstItem + '.');
+>>>>>>> 5c54ff9a3649c0526bdc52b318afb6c536184387
 });
 
 // Write a function called getLength that passes the length of the array into the callback
 function getLength (arr, cb){
-	return arr.length;
+	cb(arr.length);
 }
 
 getLength(foods, (length) => {
+<<<<<<< HEAD
+  console.log('The length of the array is ' + length + '.');
+=======
   console.log(`The length of the array is ` + length);
+>>>>>>> 5c54ff9a3649c0526bdc52b318afb6c536184387
 });
 
 // Write a function called last which passes the last item of the array into the callback
 
 function last (arr, cb){
-	return arr[arr.length - 1];
+	cb(arr[arr.length - 1]);
 }
 
 last(foods, (lastItem) => {
-  console.log('The last item in the array is ' + lastItem);
+  console.log('The last item in the array is ' + lastItem + '.');
 });
 
 // Write a function called sumNums that adds two numbers and passes the result to the callback
 
 function sumNums (x, y, cb){
-	return x + y;
+	cb(x + y);
 }
 
 sumNums(5, 10, (sum) => {
-  console.log('The sum is ' + sum);
+  console.log('The sum is ' + sum + '.');
 });
 
 // Write a function called multiplyNums that adds two numbers and passes the result to the callback
 
 function multiplyNums (x, y, cb){
-	return x * y;
+	cb(x * y);
 }
 
 multiplyNums(5, 10, (product) => {
+<<<<<<< HEAD
+  console.log('The product is ' + product + '.');
+=======
   console.log(`The product is ` + product);
+>>>>>>> 5c54ff9a3649c0526bdc52b318afb6c536184387
 });
 
 // Write a function called contains that checks if an item is present inside of the given array.
 // Pass true to the callback if it is, otherwise pass false
 
 function contains(arr, str, cb){
-	return arr.includes(str);
+	cb(arr.includes(str));
 
 }
 
 contains(foods, 'ribeye', (result) => {
-  console.log(result ? 'ribeye is in the array' : 'ribeye is not in the array');
+  console.log(result ? 'Ribeye is in the array.' : 'Ribeye is not in the array.');
 });
 
 // Write a function called removeDuplicates that removes all duplicate values from the given array.
@@ -89,7 +101,7 @@ function removeDuplicates (arr, cb){
 			uniqueFoods.push(arr[i]);
 		}
 	}
-	return uniqueFoods;
+	cb(uniqueFoods);
 }
 
 removeDuplicates(foods, (uniqueFoods) => {
